@@ -1,6 +1,13 @@
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./styles/global";
+import { defaultTheme } from "./styles/themes/default";
 
 export function App() {
   return (
-   <div>CoffeHouse</div>
+    <ThemeProvider theme={defaultTheme}>
+      <div>CoffeHouse</div>
+      <GlobalStyle />
+    </ThemeProvider>
+   
   )
 }
