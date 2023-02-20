@@ -8,10 +8,22 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: ${props => props.theme.background};
-        color: ${props => props.theme.purple};
+        max-width: 1300px;
+        background-color: ${(props) => props.theme["base-title"]};
+        padding-top: 1rem;
+        padding-inline: 10rem;
+        margin: 0 auto;
+        -webkit-font-smoothing: antialiased;
     }
+
+    body, input, button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    }
+
 `;
+
 /* 
     font-family: 'Baloo 2', cursive;
     font-family: 'Roboto', sans-serif;
