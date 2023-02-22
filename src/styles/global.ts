@@ -8,11 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        max-width: 1300px;
-        background-color: ${(props) => props.theme["base-title"]};
-        padding-top: 1rem;
-        padding-inline: 10rem;
-        margin: 0 auto;
+        background-color: ${(props) => props.theme.background};
         -webkit-font-smoothing: antialiased;
     }
 
@@ -20,11 +16,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    line-height: 130%;
     }
-
 `;
-
-/* 
-    font-family: 'Baloo 2', cursive;
-    font-family: 'Roboto', sans-serif;
-*/
