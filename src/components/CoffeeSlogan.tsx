@@ -43,9 +43,7 @@ export function CoffeeSlogan() {
         </div>
       </div>
 
-      <div className="imageCoffeeContent">
         <img src={imageCoffee} alt="" />
-      </div>
     </CoffeeSloganContent>
   );
 }
