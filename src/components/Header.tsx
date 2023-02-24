@@ -12,7 +12,7 @@ export function Header(){
             <SectionCartLocal>
                 <Localization>
                     <MapPin weight="fill" size={22} className="iconMap"/>
-                    <div>Porto Alegre, RS</div>
+                    <p>Porto Alegre, RS</p>
                 </Localization>
 
                 <div className="contentCart">
