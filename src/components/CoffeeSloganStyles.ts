@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
-export const CoffeeSloganContent = styled.div`
-  //background-color: brown;
-
-  margin-top: 4rem;
+export const CoffeeSloganContent = styled.section`
+  margin-top: 5rem;
   display: flex;
   align-items: center;
   gap: 3.5rem;
@@ -11,12 +9,10 @@ export const CoffeeSloganContent = styled.div`
   .slogan {
     display: flex;
     flex-direction: column;
-    //  background-color: blueviolet;
     gap: 1.75rem;
   }
 
   .title {
-    // background-color: cadetblue;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -25,12 +21,14 @@ export const CoffeeSloganContent = styled.div`
       font-size: 3rem;
       font-family: "Baloo 2", cursive;
       line-height: 130%;
+      color: ${(props) => props.theme["base-title"]};
     }
 
     p {
       font-size: 1.25rem;
       font-weight: 400;
       line-height: 130%;
+      color: ${(props) => props.theme["base-title"]};
     }
   }
 
@@ -39,14 +37,20 @@ export const CoffeeSloganContent = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
 
-
-    div:nth-child(1) span{
-        background: ${props => props.theme.purple};
-    } 
-
+    div:nth-child(1) span {
+      background: ${(props) => props.theme["yellow-dark"]};
+    }
+    div:nth-child(2) span {
+      background: ${(props) => props.theme["base-text"]};
+    }
+    div:nth-child(3) span {
+      background: ${(props) => props.theme.yellow};
+    }
+    div:nth-child(4) span {
+      background: ${(props) => props.theme.purple};
+    }
 
     > div {
-      // background-color: aqua;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -55,8 +59,9 @@ export const CoffeeSloganContent = styled.div`
       .contentIcons {
         padding: 0.5rem;
         border-radius: 9999px;
-         background-color: red;
+        background-color: red;
         display: inline-flex;
+        color: ${(props) => props.theme.background};
       }
     }
 
@@ -67,14 +72,8 @@ export const CoffeeSloganContent = styled.div`
     }
   }
 
-  .imageCoffeeContent {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    // background-color: darkgreen;
-
-    > img {
-    width: 26.5rem;
-    }
+  img {
+    max-width: 26.5rem;
+    width: 100%;
   }
 `;
