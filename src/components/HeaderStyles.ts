@@ -16,7 +16,7 @@ export const Localization = styled.div`
   align-items: center;
   gap: 0.5rem;
 
-  div {
+  p {
     font-size: 14px;
     font-weight: 400;
     line-height: 130%;
