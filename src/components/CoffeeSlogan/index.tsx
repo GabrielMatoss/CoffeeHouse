@@ -1,6 +1,6 @@
 import imageCoffee from "../assets/coffee-delivery.png";
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
-import { CoffeeSloganContent } from "./CoffeeSloganStyles";
+import { CoffeeSloganContent } from "./styles";
 
 export function CoffeeSlogan() {
   return (

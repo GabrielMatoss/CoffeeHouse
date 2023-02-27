@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const CoffeListStyles = styled.main`
   margin-top: 5rem;
   text-align: left;
+  width: 100%;
   //Talvez tenha que ter outro container por volta desse
   .CardContent {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+   // justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
   }

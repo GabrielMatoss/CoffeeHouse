@@ -1,5 +1,5 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
-import { CoffeListStyles } from "./CoffeeListStyles";
+import { CoffeListStyles } from "./styles";
 import imgCoffeeExpresso from "../assets/Expresso.png";
 
 export function CoffeeList() {
