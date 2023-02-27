@@ -1,8 +1,6 @@
 import { HeaderNav, Localization, SectionCartLocal } from "./styles";
-import coffeDeliveryLogo  from "../assets/coffeedelivery-logo.svg"; 
-
-import { MapPin } from "phosphor-react";
-import {ShoppingCart} from "phosphor-react";
+import coffeDeliveryLogo from "../../assets/CoffeeDelivery-Logo.svg";
+import { MapPin, ShoppingCart } from "phosphor-react";
 
 export function Header(){
     return (

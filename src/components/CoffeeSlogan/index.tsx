@@ -1,4 +1,4 @@
-import imageCoffee from "../assets/coffee-delivery.png";
+import imageCoffee from "../../assets/Coffee-Delivery.png";
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 import { CoffeeSloganContent } from "./styles";
 
