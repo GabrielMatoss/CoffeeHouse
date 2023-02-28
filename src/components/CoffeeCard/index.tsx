@@ -42,9 +42,9 @@ export const listCoffee: listCoffeeProps[] = [
 ];
 
 export function CoffeeCard() {
-  const [cards, setCards] = useState<listCoffeeProps[]>(listCoffee);
+  const [cards, setCards] = useState<any>(listCoffee);
 
-  return cards.map((values) => {
+  return cards.map((values: listCoffeeProps) => {
     return (
       <CoffeeCards key={values.id}>
         <img src={imgCoffeeExpresso} alt="" />
