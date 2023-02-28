@@ -11,8 +11,9 @@ export function CoffeeList() {
 
       <div className="CardContent">
         <div className="Card">
-          <div className="SectionCoffeImg">
-            <img src={imgCoffeeExpresso} alt="" />
+
+          <img src={imgCoffeeExpresso} alt="" />
+          <div className="SectionCoffeeTag">
             <span>tradicional</span>
           </div>
 

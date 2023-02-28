@@ -23,25 +23,17 @@ export const CoffeListStyles = styled.main`
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
-    padding-inline: 10px;
+    padding-inline: 15px;
     background: ${(props) => props.theme["base-card"]};
-    max-width: 16rem;
-    max-height: 19.37rem;
+    width: 16rem;
+    height: 19.37rem;
     border-radius: 0 20px 0 20px;
 
-    .SectionCoffeImg {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .SectionCoffeImg img {
-      position: relative;
-      bottom: 19px;
+    > img {
+      margin-top: -1.3rem;
     }
 
-    .SectionCoffeImg span {
+    .SectionCoffeeTag span {
       padding: 4px 8px;
       border-radius: 100px;
 
@@ -71,15 +63,16 @@ export const CoffeListStyles = styled.main`
 
     .SectionDescrition p {
       text-align: center;
+      font-size: .95rem;
       color: ${(props) => props.theme["base-label"]};
     }
 
     .SectionPrice {
-      //background-color: red;
       display: flex;
       width: 100%;
       align-items: center;
       justify-content: space-between;
+      margin-top: 1rem;
       margin-bottom: 1rem;
 
       > p {
