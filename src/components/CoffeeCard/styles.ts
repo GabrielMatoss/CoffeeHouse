@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const CoffeeCards = styled.div`
     position: relative;
-    margin-top: 3rem;
+    //margin-top: 3rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +30,10 @@ export const CoffeeCards = styled.div`
       font-size: 0.625rem;
       font-weight: 700;
       text-transform: uppercase;
+    }
+    
+    .SectionCoffeeTags span:nth-child(2){
+      margin-left: 5px;
     }
 
     .SectionDescrition {
