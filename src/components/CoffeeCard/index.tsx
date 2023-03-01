@@ -6,7 +6,7 @@ interface listCoffeeProps {
   id: number;
   src: string;
   name: string;
-  tags: string | string[];
+  tags: string[];
   description: string;
   value: string;
 }
@@ -16,7 +16,7 @@ export const listCoffee: listCoffeeProps[] = [
     id: 1,
     name: "Expresso Tradicional",
     src: `${listImgCoffee[0]}`,
-    tags: "Tradicional",
+    tags: ["Tradicional"],
     description: "O tradicional café feito com água quente e grãos moídos",
     value: "9,90",
   },
@@ -24,7 +24,7 @@ export const listCoffee: listCoffeeProps[] = [
     id: 2,
     name: "Expresso Americano",
     src: `${listImgCoffee[1]}`,
-    tags: "Tradicional",
+    tags: ["Tradicional"],
     description: "Expresso diluído, menos intenso que o tradicional",
     value: "9,90",
   },
@@ -32,7 +32,7 @@ export const listCoffee: listCoffeeProps[] = [
     id: 3,
     name: "Expresso Cremoso",
     src: `${listImgCoffee[2]}`,
-    tags: "Tradicional",
+    tags: ["Tradicional"],
     description: "Café expresso tradicional com espuma cremosa",
     value: "9,90",
   },
@@ -57,7 +57,8 @@ export const listCoffee: listCoffeeProps[] = [
     name: "Latte",
     src: `${listImgCoffee[5]}`,
     tags: ["Tradicional", "Com Leite"],
-    description: "Uma dose de café expresso com o dobro de leite e espuma cremosa",
+    description:
+      "Uma dose de café expresso com o dobro de leite e espuma cremosa",
     value: "9,90",
   },
   {
@@ -65,7 +66,8 @@ export const listCoffee: listCoffeeProps[] = [
     name: "Capuccino",
     src: `${listImgCoffee[6]}`,
     tags: ["Tradicional", "Com Leite"],
-    description: "Bebida com canela feita de doses iguais de café, leite e espuma",
+    description:
+      "Bebida com canela feita de doses iguais de café, leite e espuma",
     value: "9,90",
   },
   {
@@ -73,7 +75,8 @@ export const listCoffee: listCoffeeProps[] = [
     name: "Macchiato",
     src: `${listImgCoffee[7]}`,
     tags: ["Tradicional", "Com Leite"],
-    description: "Café expresso misturado com um pouco de leite quente e espuma",
+    description:
+      "Café expresso misturado com um pouco de leite quente e espuma",
     value: "9,90",
   },
   {
@@ -97,14 +100,15 @@ export const listCoffee: listCoffeeProps[] = [
     name: "Cubano",
     src: `${listImgCoffee[10]}`,
     tags: ["Especial", "Alcoólico", "Gelado"],
-    description: "Drink gelado de café expresso com rum, creme de leite e hortelã",
+    description:
+      "Drink gelado de café expresso com rum, creme de leite e hortelã",
     value: "9,90",
   },
   {
     id: 12,
     name: "Havaiano",
     src: `${listImgCoffee[11]}`,
-    tags: "Especial",
+    tags: ["Especial"],
     description: "Bebida adocicada preparada com café e leite de coco",
     value: "9,90",
   },
@@ -112,7 +116,7 @@ export const listCoffee: listCoffeeProps[] = [
     id: 13,
     name: "Árabe",
     src: `${listImgCoffee[12]}`,
-    tags: "Especial",
+    tags: ["Especial"],
     description: "Bebida preparada com grãos de café árabe e especiarias",
     value: "9,90",
   },
@@ -126,28 +130,18 @@ export const listCoffee: listCoffeeProps[] = [
   },
 ];
 
-
 //Mandar a lista e a interface se pa para o CoffeeList
 export function CoffeeCard() {
-  const [cards, setCards] = useState<any>(listCoffee);
+  const [cards, setCards] = useState<listCoffeeProps[]>(listCoffee);
 
-
-  return cards.map((values: listCoffeeProps) => {
-    console.log(values.tags);
+  return cards.map((values: any) => {
     return (
       <CoffeeCards key={values.id}>
         <img src={values.src} alt="" />
         <div className="SectionCoffeeTag">
-            {
-             Array.isArray(values.tags) ? (
-           <div className="SectionCoffeeTags">
-            <span>{values.tags[0]}</span>
-            <span>{values.tags[1]}</span>
-           </div> 
-           ) :
-              <span>{values.tags}</span> 
-            }
-          {/* && values.tags.length === 3  */}
+          {values.tags.map((teste: any) => {
+            return <span key={teste}>{teste}</span>;
+          })}
         </div>
 
         <section className="SectionDescrition">
