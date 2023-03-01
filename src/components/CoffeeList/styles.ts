@@ -6,12 +6,13 @@ export const CoffeListStyles = styled.main`
   width: 100%;
   
   .CardContent {
+    margin-top: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
-   // justify-content: center;
+    //justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.3rem;
   }
 
 `;

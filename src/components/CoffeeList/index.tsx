@@ -1,4 +1,4 @@
-import { CoffeeCard } from "../CoffeeCard/index";
+import { CoffeeCard } from "../CoffeeCard";
 import { CoffeListStyles } from "./styles";
 
 
@@ -8,11 +8,9 @@ export function CoffeeList() {
       <div>
         <h2>Nossos cafés</h2>
       </div>
-
       <div className="CardContent">
         <CoffeeCard />
       </div>
-      
     </CoffeListStyles>
   );
 }
