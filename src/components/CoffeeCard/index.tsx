@@ -1,5 +1,10 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
-import { useState } from "react";
+import {
+  ReactComponentElement,
+  ReactElement,
+  ReactFragment,
+  useState,
+} from "react";
 import { CoffeeCards } from "./styles";
 import { listImgCoffee } from "../../utils/imagesCoffeeLib";
 interface listCoffeeProps {
@@ -131,43 +136,39 @@ export const listCoffee: listCoffeeProps[] = [
 ];
 
 //Mandar a lista e a interface se pa para o CoffeeList
-export function CoffeeCard() {
-  const [cards, setCards] = useState<listCoffeeProps[]>(listCoffee);
+export function CoffeeCard(): any {
+  return listCoffee.map((values) => (
+    <CoffeeCards key={values.id}>
+      <img src={values.src} alt="" />
+      <div className="SectionCoffeeTag">
+        {values.tags.map((tag: string, index) => {
+          return <span key={index}>{tag}</span>;
+        })}
+      </div>
 
-  return cards.map((values: any) => {
-    return (
-      <CoffeeCards key={values.id}>
-        <img src={values.src} alt="" />
-        <div className="SectionCoffeeTag">
-          {values.tags.map((teste: any) => {
-            return <span key={teste}>{teste}</span>;
-          })}
-        </div>
+      <section className="SectionDescrition">
+        <h3>{values.name}</h3>
+        <p>{values.description}</p>
+      </section>
 
-        <section className="SectionDescrition">
-          <h3>{values.name}</h3>
-          <p>{values.description}</p>
-        </section>
-
-        <section className="SectionPrice">
-          <p>{values.value}</p>
-          <div className="ContainerButtons">
-            <div className="QtdButtons">
-              <button /*onClick={}*/>
-                <Minus size={16} weight="fill" />
-              </button>
-              <p>1</p>
-              <button /*onClick={}*/>
-                <Plus size={20} weight="fill" />
-              </button>
-            </div>
-
-            <div className="cart">
-              <ShoppingCart weight="fill" size={20} />
-            </div>
+      <section className="SectionPrice">
+        <p>{values.value}</p>
+        <div className="ContainerButtons">
+          <div className="QtdButtons">
+            <button /*onClick={}*/>
+              <Minus size={16} weight="fill" />
+            </button>
+            <p>1</p>
+            <button /*onClick={}*/>
+              <Plus size={20} weight="fill" />
+            </button>
           </div>
-        </section>
-      </CoffeeCards>
-    );
-  });
+
+          <div className="cart">
+            <ShoppingCart weight="fill" size={20} />
+          </div>
+        </div>
+      </section>
+    </CoffeeCards>
+  ));
 }
