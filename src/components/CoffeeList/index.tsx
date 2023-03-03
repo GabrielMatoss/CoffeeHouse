@@ -9,7 +9,7 @@ export function CoffeeList() {
         <h2>Nossos cafés</h2>
       </div>
       <div className="CardContent">
-        <CoffeeCard />
+      <CoffeeCard />
       </div>
     </CoffeListStyles>
   );
