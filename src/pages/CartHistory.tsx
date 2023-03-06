@@ -1,5 +1,7 @@
 export function CartHistory () {
     return(
-        <div>History</div>
+        <div>
+            Complete seu pedido
+        </div>
     )
 }
