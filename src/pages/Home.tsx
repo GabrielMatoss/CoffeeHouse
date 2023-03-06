@@ -1,5 +1,11 @@
+import { CoffeeList } from "../components/CoffeeList";
+import { CoffeeSlogan } from "../components/CoffeeSlogan";
+
 export function Home () {
     return(
-        <div>Eita</div>
+        <>
+        <CoffeeSlogan />
+        <CoffeeList />
+        </>
     )
 }
