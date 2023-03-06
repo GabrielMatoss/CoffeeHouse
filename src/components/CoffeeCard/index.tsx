@@ -1,4 +1,5 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { NavLink } from "react-router-dom";
 import { listCoffee} from "../../utils/CoffeeData";
 import { CoffeeCards } from "./styles";
 
@@ -32,9 +33,9 @@ export function CoffeeCard(){
              </button>
            </div>
  
-           <div className="cart">
+           <NavLink to={"/cart"} title="Histórico do carrinho de compras" className="cart">
              <ShoppingCart weight="fill" size={20} />
-           </div>
+           </NavLink>
          </div>
        </section>
      </CoffeeCards>
