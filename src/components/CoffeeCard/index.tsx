@@ -23,6 +23,7 @@ export function CoffeeCard(){
        <section className="SectionPrice">
          <p>{values.value}</p>
          <div className="ContainerButtons">
+          {/* Podemos criar um componente de buttons */}
            <div className="QtdButtons">
              <button /*onClick={}*/>
                <Minus size={16} weight="fill" />
@@ -33,8 +34,10 @@ export function CoffeeCard(){
              </button>
            </div>
  
-           <NavLink to={"/cart"} title="Histórico do carrinho de compras" className="cart">
-             <ShoppingCart weight="fill" size={20} />
+           <NavLink to={"/cart"} title="Histórico do carrinho de compras" >
+            <div className="cart">
+            <ShoppingCart weight="fill" size={20} />
+            </div>
            </NavLink>
          </div>
        </section>
