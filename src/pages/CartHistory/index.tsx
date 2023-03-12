@@ -41,34 +41,28 @@ export function CartHistory() {
 
       <div className="contentValues">
         <h3>Cafés relacionados</h3>
-        <div className="valuesTotal">
-          <div className="queryCoffees">
-                <img src={caféComLeite} alt="" />
-                <div className="teste">
-                 
+        <div className="container">
+            <div className="contentCardCoffee">
+                <img src={caféComLeite} />
+                <div>
                   <div>
-                  <p>Expresso Tradicional</p>
+                    <h6>Café com Leite</h6>
+                    <p>R$ 5,00</p>
+                  </div>
+
                   <div className="containerButtons">
-                    <div className="buttonsQtd">
-                    <button /*onClick={}*/>
-                      <Minus size={16} weight="fill" />
-                      </button>
-                      <p>1</p>
-                     <button /*onClick={}*/>
-                      <Plus size={20} weight="fill" />
-                    </button>
+                    <div>
+                      <button>+</button>
+                      <span>1</span>
+                      <button>-</button>
                     </div>
-                     
+
                     <button>
-                      <Trash size={20} />
-                      Remover
-                     </button>
+                      <span>Remover</span>
+                    </button>
                   </div>
-                   
-                  </div>
-                  <p>R$ 9,90</p>
                 </div>
-          </div>
+            </div>
         </div>
       </div>
     </ContainerCartHistory>
