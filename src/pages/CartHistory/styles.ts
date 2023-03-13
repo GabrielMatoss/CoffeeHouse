@@ -5,7 +5,6 @@ export const ContainerCartHistory = styled.main`
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
-  background-color: darkcyan;
   margin-top: 3.5rem;
 
   h3 {
@@ -15,7 +14,7 @@ export const ContainerCartHistory = styled.main`
   }
 
   form {
-    background-color: cadetblue;
+    background-color: ${(props) => props.theme["base-card"]};
     padding: 40px;
   }
 
@@ -41,27 +40,65 @@ export const ContainerCartHistory = styled.main`
     justify-content: center;
     gap: 1rem;
 
+    input {
+      border: none;
+      background-color: ${(props) => props.theme["base-input"]};
+      border: 1px solid ${(props) => props.theme["base-button"]};
+      border-radius: 4px;
+      height: 2.4rem;
+      padding-left: 0.8rem;
+    }
+
     #Rua {
       width: 100%;
+    }
+    .containerNumberAndComplement {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      #Num {
+        flex: 1;
+      }
+      #Comp {
+        flex: 2;
+      }
+    }
+
+    .containerBairroCidadeUf {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      #Bairro {
+        flex: 1;
+      }
+      #Cidade {
+        flex: 1;
+      }
+      #Uf {
+        width: 3.5rem;
+      }
     }
   }
 
   .contentValues {
-    // background-color: burlywood;
-
+    //background-color: brown;
     .container {
+      background-color: ${(props) => props.theme["base-card"]};
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 1rem;
 
       .contentCardCoffee {
         display: flex;
         // background-color: blue;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 100%;
-        border-bottom: 2px solid grey;
+        border-bottom: 1px solid #e6e5e5;
         padding-bottom: 1rem;
         img {
           width: 5rem;
@@ -73,16 +110,52 @@ export const ContainerCartHistory = styled.main`
           flex-direction: column;
           .nameAndPrice {
             display: flex;
-
-            width: 100%;
-            // background-color: burlywood;
-            gap: 3rem;
+            gap: 4rem;
+            > p {
+              font-weight: bold;
+            }
           }
 
           .containerButtons {
             margin-top: 1rem;
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: flex-start;
+
+            button {
+              border: none;
+              background: none;
+              color: ${(props) => props.theme.purple};
+              font-size: 1rem;
+            }
+
+            .qtdButtons {
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: baseline;
+              gap: 6px;
+              background-color: ${(props) => props.theme["base-button"]};
+              padding: 5px 9px;
+              border-radius: 6px;
+            }
+
+            .removeBtn {
+              text-align: center;
+              display: flex;
+              align-items: center;
+
+              gap: 0.5rem;
+              background-color: ${(props) => props.theme["base-button"]};
+              padding: 8px 9px;
+              border-radius: 6px;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              span {
+                color: ${(props) => props.theme["base-label"]};
+              }
+            }
           }
         }
       }
