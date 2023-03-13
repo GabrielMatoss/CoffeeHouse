@@ -18,18 +18,18 @@ export function CartHistory() {
             </div>
           </div>
 
-          <input type="text" name="" id="CEP" />
-          <input type="text" name="" id="Rua" />
+          <input type="text" name="" id="CEP" placeholder="CEP" />
+          <input type="text" name="" id="Rua" placeholder="Rua" />
 
-          <div>
-            <input type="text" name="" id="" />
-            <input type="text" name="" id="" />
+          <div className="containerNumberAndComplement">
+            <input type="text" name="" id="Num" placeholder="Número" />
+            <input type="text" name="" id="Comp" placeholder="Complemento" />
           </div>
 
-          <div>
-            <input type="text" name="" id="" />
-            <input type="text" name="" id="" />
-            <input type="text" name="" id="" />
+          <div className="containerBairroCidadeUf">
+            <input type="text" name="" id="Bairro" placeholder="Bairro" />
+            <input type="text" name="" id="Cidade" placeholder="Cidade" />
+            <input type="text" name="" id="Uf" placeholder="UF" />
           </div>
         </form>
 
@@ -46,17 +46,48 @@ export function CartHistory() {
             <div className="contentPropsCoffee">
               <div className="nameAndPrice">
                 <h4>Café com Leite</h4>
-                <p>R$ 5,00</p>
+                <p>R$ 6,00</p>
               </div>
 
               <div className="containerButtons">
-                <div>
-                  <button>+</button>
-                  <span>1</span>
-                  <button>-</button>
+                <div className="qtdButtons">
+                  <button>
+                    <Minus size={18} weight="fill" />
+                  </button>
+                  <p>1</p>
+                  <button>
+                    <Plus size={18} weight="fill" />
+                  </button>
                 </div>
 
-                <button>
+                <button className="removeBtn">
+                  <Trash size={18} />
+                  <span>Remover</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="contentCardCoffee">
+            <img src={caféComLeite} />
+            <div className="contentPropsCoffee">
+              <div className="nameAndPrice">
+                <h4>Café com Leite</h4>
+                <p>R$ 6,00</p>
+              </div>
+
+              <div className="containerButtons">
+                <div className="qtdButtons">
+                  <button>
+                    <Minus size={18} weight="fill" />
+                  </button>
+                  <p>1</p>
+                  <button>
+                    <Plus size={18} weight="fill" />
+                  </button>
+                </div>
+
+                <button className="removeBtn">
+                  <Trash size={18} />
                   <span>Remover</span>
                 </button>
               </div>
