@@ -1,4 +1,4 @@
-import { MapPinLine, Minus, Plus, Trash, TrashSimple } from "phosphor-react";
+import { Bank, CreditCard, CurrencyDollar, MapPinLine, Minus, Money, Plus, Trash, TrashSimple } from "phosphor-react";
 import { ContainerCartHistory } from "./styles";
 
 import caféComLeite from "../../assets/cafeComLeite.png";
@@ -33,8 +33,31 @@ export function CartHistory() {
           </div>
         </form>
 
-        <div className="methodPayment">
-          <p>Metodos de pagamento</p>
+        <div className="containerMethodPayment">
+
+          <div className="sectionInfoPayment">
+          <CurrencyDollar size={25} />
+            <div className="contentInfosPayment">
+              <h4>Pagamento</h4>
+              <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+            </div>
+
+            <div className="selectionMethodsPayment">
+                <div className="paymentMethods">
+                <CreditCard size={25} />
+                  <p>Cartão de Crétido</p>
+                </div>
+                <div className="paymentMethods">
+                <Bank size={25} />
+                  <p>Cartão de Débito</p>
+                </div>
+                <div className="paymentMethods">
+                <Money size={25} />
+                  <p>Dinheiro</p>
+                </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

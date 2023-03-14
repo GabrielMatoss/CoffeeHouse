@@ -13,10 +13,6 @@ export const ContainerCartHistory = styled.main`
     font-size: 1.2rem;
   }
 
-  form {
-    background-color: ${(props) => props.theme["base-card"]};
-    padding: 40px;
-  }
 
   .headerForm {
     // background-color: brown;
@@ -25,7 +21,7 @@ export const ContainerCartHistory = styled.main`
     align-items: flex-start;
     justify-content: flex-start;
 
-    h3 {
+    h4 {
       font-family: "Roboto", sans-serif;
     }
     svg {
@@ -34,6 +30,9 @@ export const ContainerCartHistory = styled.main`
   }
 
   .formContainer {
+    background-color: ${(props) => props.theme["base-card"]};
+    padding: 40px;
+    //margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -83,8 +82,61 @@ export const ContainerCartHistory = styled.main`
     }
   }
 
+   .contentInfos{
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+  } 
+  .containerMethodPayment{
+    background: ${props => props.theme["base-card"]};
+    padding: 40px;
+
+    .sectionInfoPayment{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    //  flex-direction: column;
+      gap:   0.5rem;
+      h4 {
+      font-family: "Roboto", sans-serif;
+      color: ${props => props.theme["base-subtitle"]};
+    }
+      svg {
+        color: ${props => props.theme.purple};
+      }  
+    }
+      /* .selectionMethodsPayment{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: .7rem;
+      } */
+
+      /* .paymentMethods{
+        background-color: ${(props) => props.theme["base-button"]};
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 6px;
+        gap: 1rem;
+        flex: 1;
+
+        p{
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          line-height: 160%;
+        }
+      /* } */
+    }
+  /* }  */
+
   .contentValues {
     //background-color: brown;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
     .container {
       background-color: ${(props) => props.theme["base-card"]};
       display: flex;
