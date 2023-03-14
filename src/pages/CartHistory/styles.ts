@@ -147,14 +147,15 @@ export const ContainerCartHistory = styled.main`
     flex-direction: column;
     gap: .9rem;
     .container {
+      width: 100%;
       background-color: ${(props) => props.theme["base-card"]};
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      padding: 1.4rem;
-    //  padding: 40px;
+      padding: 40px;
 
       .contentCardCoffee {
+        width: 100%;
         display: flex;
         // background-color: blue;
         align-items: center;

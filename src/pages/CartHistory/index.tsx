@@ -90,7 +90,7 @@ export function CartHistory() {
 
                 <button className="removeBtn">
                   <Trash size={18} />
-                  <span>Remover</span>
+                  <p>Remover</p>
                 </button>
               </div>
 
