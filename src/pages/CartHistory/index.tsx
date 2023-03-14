@@ -36,11 +36,14 @@ export function CartHistory() {
         <div className="containerMethodPayment">
 
           <div className="sectionInfoPayment">
-          <CurrencyDollar size={25} />
+            <div className="containerContentInfos">
+            <CurrencyDollar size={25} />
             <div className="contentInfosPayment">
               <h4>Pagamento</h4>
               <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
             </div>
+            </div>
+  
 
             <div className="selectionMethodsPayment">
                 <div className="paymentMethods">
@@ -64,8 +67,10 @@ export function CartHistory() {
       <div className="contentValues">
         <h3>Cafés relacionados</h3>
         <div className="container">
+
           <div className="contentCardCoffee">
             <img src={caféComLeite} />
+
             <div className="contentPropsCoffee">
               <div className="nameAndPrice">
                 <h4>Café com Leite</h4>
@@ -88,33 +93,33 @@ export function CartHistory() {
                   <span>Remover</span>
                 </button>
               </div>
+
             </div>
+
           </div>
-          <div className="contentCardCoffee">
-            <img src={caféComLeite} />
-            <div className="contentPropsCoffee">
-              <div className="nameAndPrice">
-                <h4>Café com Leite</h4>
-                <p>R$ 6,00</p>
-              </div>
 
-              <div className="containerButtons">
-                <div className="qtdButtons">
-                  <button>
-                    <Minus size={18} weight="fill" />
-                  </button>
-                  <p>1</p>
-                  <button>
-                    <Plus size={18} weight="fill" />
-                  </button>
-                </div>
-
-                <button className="removeBtn">
-                  <Trash size={18} />
-                  <span>Remover</span>
-                </button>
-              </div>
+          <div className="totalItens">
+            <div className="calculatorValues">
+            <div>
+              <p>Total de itens</p>
+              <span>R$ 29,70</span>
             </div>
+
+            <div>
+              <p>Entrega</p>
+              <span>R$ 3,50</span>
+            </div>
+
+            <div>
+              <p>Total</p>
+              <span>R$ 33,20</span>
+            </div>
+
+            </div>
+
+              <div className="containerButton">
+                    <button>Confirmar Pedido</button>
+              </div>
           </div>
         </div>
       </div>

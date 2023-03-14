@@ -46,6 +46,7 @@ export const ContainerCartHistory = styled.main`
       border-radius: 4px;
       height: 2.4rem;
       padding-left: 0.8rem;
+      font-size: .8rem;
     }
 
     #Rua {
@@ -95,8 +96,16 @@ export const ContainerCartHistory = styled.main`
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-    //  flex-direction: column;
-      gap:   0.5rem;
+      flex-direction: column;
+      gap:  2rem;
+
+      .containerContentInfos {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: .5rem;
+      }
+
       h4 {
       font-family: "Roboto", sans-serif;
       color: ${props => props.theme["base-subtitle"]};
@@ -105,15 +114,15 @@ export const ContainerCartHistory = styled.main`
         color: ${props => props.theme.purple};
       }  
     }
-      /* .selectionMethodsPayment{
+      .selectionMethodsPayment{
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: space-between;
         gap: .7rem;
-      } */
+      } 
 
-      /* .paymentMethods{
+       .paymentMethods{
         background-color: ${(props) => props.theme["base-button"]};
         display: flex;
         padding: 1rem;
@@ -128,12 +137,12 @@ export const ContainerCartHistory = styled.main`
           font-size: 0.8rem;
           line-height: 160%;
         }
-      /* } */
+       } 
     }
-  /* }  */
+     
 
   .contentValues {
-    //background-color: brown;
+   // background-color: brown;
     display: flex;
     flex-direction: column;
     gap: .9rem;
@@ -142,7 +151,8 @@ export const ContainerCartHistory = styled.main`
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      padding: 1rem;
+      padding: 1.4rem;
+    //  padding: 40px;
 
       .contentCardCoffee {
         display: flex;
@@ -208,6 +218,41 @@ export const ContainerCartHistory = styled.main`
                 color: ${(props) => props.theme["base-label"]};
               }
             }
+          }
+        }
+      }
+
+      .totalItens{
+        display: flex;
+       // background-color: chocolate;
+        flex-direction: column;
+        gap: 2rem;
+        .calculatorValues{
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+          > div{
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        .containerButton{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > button{
+            width: 100%;
+            padding: .8rem;
+            border-radius: 6px;
+            border: none;
+            background-color: ${props => props.theme.yellow};
+            color: ${props => props.theme.white};
+            font-weight: 700;
+            font-size: .8rem;
+            line-height: 160%;
+            text-transform: uppercase;
           }
         }
       }
