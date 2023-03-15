@@ -125,6 +125,7 @@ export const ContainerCartHistory = styled.main`
        .paymentMethods{
         background-color: ${(props) => props.theme["base-button"]};
         display: flex;
+        border: none;
         padding: 1rem;
         align-items: center;
         justify-content: flex-start;
@@ -154,14 +155,14 @@ export const ContainerCartHistory = styled.main`
       gap: 1.5rem;
       padding: 40px;
 
-      .contentCardCoffee {
-        width: 100%;
+      .contentCardCoffee { 
         display: flex;
         // background-color: blue;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         border-bottom: 1px solid #e6e5e5;
+        gap: 1rem;
         padding-bottom: 1rem;
         img {
           width: 5rem;
@@ -172,8 +173,10 @@ export const ContainerCartHistory = styled.main`
           display: flex;
           flex-direction: column;
           .nameAndPrice {
+           width: 13rem;
             display: flex;
-            gap: 4rem;
+            align-items: center;
+            justify-content: space-between;
             > p {
               font-weight: bold;
             }
@@ -200,7 +203,7 @@ export const ContainerCartHistory = styled.main`
               justify-content: baseline;
               gap: 6px;
               background-color: ${(props) => props.theme["base-button"]};
-              padding: 5px 9px;
+              padding: 5px;
               border-radius: 6px;
             }
 
@@ -211,7 +214,7 @@ export const ContainerCartHistory = styled.main`
 
               gap: 0.5rem;
               background-color: ${(props) => props.theme["base-button"]};
-              padding: 8px 9px;
+              padding: 8px;
               border-radius: 6px;
               text-transform: uppercase;
               font-size: 0.8rem;

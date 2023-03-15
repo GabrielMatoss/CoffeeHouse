@@ -46,18 +46,18 @@ export function CartHistory() {
   
 
             <div className="selectionMethodsPayment">
-                <div className="paymentMethods">
+                <button className="paymentMethods">
                 <CreditCard size={25} />
                   <p>Cartão de Crétido</p>
-                </div>
-                <div className="paymentMethods">
+                </button>
+                <button className="paymentMethods">
                 <Bank size={25} />
                   <p>Cartão de Débito</p>
-                </div>
-                <div className="paymentMethods">
+                </button>
+                <button className="paymentMethods">
                 <Money size={25} />
                   <p>Dinheiro</p>
-                </div>
+                </button>
             </div>
           </div>
 
