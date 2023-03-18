@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import { listCoffee} from "../../utils/CoffeeData";
 import { CoffeeCards } from "./styles";
 
+  function handleSubtration(){
+    console.log("Subtraiu")
+  }
+
 export function CoffeeCard(){
   return(
   <>
@@ -25,7 +29,7 @@ export function CoffeeCard(){
          <div className="ContainerButtons">
           {/* Podemos criar um componente de buttons */}
            <div className="QtdButtons">
-             <button /*onClick={}*/>
+             <button onClick={handleSubtration}>
                <Minus size={16} weight="fill" />
              </button>
              <p>1</p>
