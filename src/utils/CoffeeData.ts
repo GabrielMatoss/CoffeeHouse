@@ -7,6 +7,7 @@ export interface listCoffeeProps {
     tags: string[];
     description: string;
     value: string;
+    stock: number;
   }
 
 export const listCoffee: listCoffeeProps[] = [
@@ -17,6 +18,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Tradicional"],
       description: "O tradicional café feito com água quente e grãos moídos",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Tradicional"],
       description: "Expresso diluído, menos intenso que o tradicional",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 3,
@@ -33,6 +36,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Tradicional"],
       description: "Café expresso tradicional com espuma cremosa",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 4,
@@ -41,6 +45,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Tradicional", "Gelado"],
       description: "Bebida preparada com café expresso e cubos de gelo",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 5,
@@ -49,6 +54,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Tradicional", "Com Leite"],
       description: "Meio a meio de expresso tradicional com leite vaporizado",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 6,
@@ -58,6 +64,7 @@ export const listCoffee: listCoffeeProps[] = [
       description:
         "Uma dose de café expresso com o dobro de leite e espuma cremosa",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 7,
@@ -67,6 +74,7 @@ export const listCoffee: listCoffeeProps[] = [
       description:
         "Bebida com canela feita de doses iguais de café, leite e espuma",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 8,
@@ -76,6 +84,7 @@ export const listCoffee: listCoffeeProps[] = [
       description:
         "Café expresso misturado com um pouco de leite quente e espuma",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 9,
@@ -84,6 +93,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Tradicional", "Com Leite"],
       description: "Café expresso com calda de chocolate, pouco leite e espuma",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 10,
@@ -92,6 +102,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Especial", "Com Leite"],
       description: "Bebida feita com chocolate dissolvido no leite quente e café",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 11,
@@ -101,6 +112,7 @@ export const listCoffee: listCoffeeProps[] = [
       description:
         "Drink gelado de café expresso com rum, creme de leite e hortelã",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 12,
@@ -109,6 +121,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Especial"],
       description: "Bebida adocicada preparada com café e leite de coco",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 13,
@@ -117,6 +130,7 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Especial"],
       description: "Bebida preparada com grãos de café árabe e especiarias",
       value: "9,90",
+      stock: 3,
     },
     {
       id: 14,
@@ -125,5 +139,6 @@ export const listCoffee: listCoffeeProps[] = [
       tags: ["Especial", "Alcoólico"],
       description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
       value: "9,90",
+      stock: 3,
     },
   ];
