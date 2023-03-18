@@ -1,8 +1,16 @@
-import { Bank, CreditCard, CurrencyDollar, MapPinLine, Minus, Money, Plus, Trash, TrashSimple } from "phosphor-react";
+import {
+  Bank,
+  CreditCard,
+  CurrencyDollar,
+  MapPinLine,
+  Minus,
+  Money,
+  Plus,
+  Trash,
+} from "phosphor-react";
 import { ContainerCartHistory } from "./styles";
 
 import caféComLeite from "../../assets/cafeComLeite.png";
-import chocolateQuente from "../../assets/chocolateQuente.png";
 
 export function CartHistory() {
   return (
@@ -34,40 +42,39 @@ export function CartHistory() {
         </form>
 
         <div className="containerMethodPayment">
-
           <div className="sectionInfoPayment">
             <div className="containerContentInfos">
-            <CurrencyDollar size={25} />
-            <div className="contentInfosPayment">
-              <h4>Pagamento</h4>
-              <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+              <CurrencyDollar size={25} />
+              <div className="contentInfosPayment">
+                <h4>Pagamento</h4>
+                <p>
+                  O pagamento é feito na entrega. Escolha a forma que deseja
+                  pagar
+                </p>
+              </div>
             </div>
-            </div>
-  
 
             <div className="selectionMethodsPayment">
-                <button className="paymentMethods">
+              <button className="paymentMethods">
                 <CreditCard size={25} />
-                  <p>Cartão de Crétido</p>
-                </button>
-                <button className="paymentMethods">
+                <p>Cartão de Crédito</p>
+              </button>
+              <button className="paymentMethods">
                 <Bank size={25} />
-                  <p>Cartão de Débito</p>
-                </button>
-                <button className="paymentMethods">
+                <p>Cartão de Débito</p>
+              </button>
+              <button className="paymentMethods">
                 <Money size={25} />
-                  <p>Dinheiro</p>
-                </button>
+                <p>Dinheiro</p>
+              </button>
             </div>
           </div>
-
         </div>
       </div>
 
       <div className="contentValues">
         <h3>Cafés relacionados</h3>
         <div className="container">
-
           <div className="contentCardCoffee">
             <img src={caféComLeite} />
 
@@ -93,33 +100,30 @@ export function CartHistory() {
                   <p>Remover</p>
                 </button>
               </div>
-
             </div>
-
           </div>
 
           <div className="totalItens">
             <div className="calculatorValues">
-            <div>
-              <p>Total de itens</p>
-              <span>R$ 29,70</span>
-            </div>
-
-            <div>
-              <p>Entrega</p>
-              <span>R$ 3,50</span>
-            </div>
-
-            <div>
-              <p>Total</p>
-              <span>R$ 33,20</span>
-            </div>
-
-            </div>
-
-              <div className="containerButton">
-                    <button>Confirmar Pedido</button>
+              <div>
+                <p>Total de itens</p>
+                <span>R$ 29,70</span>
               </div>
+
+              <div>
+                <p>Entrega</p>
+                <span>R$ 3,50</span>
+              </div>
+
+              <div>
+                <p>Total</p>
+                <span>R$ 33,20</span>
+              </div>
+            </div>
+
+            <div className="containerButton">
+              <button>Confirmar Pedido</button>
+            </div>
           </div>
         </div>
       </div>
