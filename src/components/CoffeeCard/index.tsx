@@ -1,16 +1,19 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { listCoffee} from "../../utils/CoffeeData";
+import { listCoffee, listCoffeeProps} from "../../utils/CoffeeData";
 import { CoffeeCards } from "./styles";
 
-  function handleSubtration(){
-    console.log("Subtraiu")
-  }
 
 export function CoffeeCard(){
+  const [state, setState] = useState<listCoffeeProps[]>(listCoffee);
+  function handleDecrease(){
+    console.log("subtration")
+  }
+  
   return(
   <>
-    {listCoffee.map((values) => (
+    {state.map((values) => (
        <CoffeeCards key={values.id}>
        <img src={values.src} alt="" />
        <div className="SectionCoffeeTag">
@@ -29,10 +32,10 @@ export function CoffeeCard(){
          <div className="ContainerButtons">
           {/* Podemos criar um componente de buttons */}
            <div className="QtdButtons">
-             <button onClick={handleSubtration}>
+             <button onClick={handleDecrease}>
                <Minus size={16} weight="fill" />
              </button>
-             <p>1</p>
+             <p>{values.stock}</p>
              <button /*onClick={}*/>
                <Plus size={20} weight="fill" />
              </button>
