@@ -1,5 +1,10 @@
+import { Hero } from "./components/Hero";
+import { HomePageContainer } from "./styles";
+
 export function Home(){
     return(
-        <h1>HomePage</h1>
+       <HomePageContainer>
+        <Hero />
+       </HomePageContainer>
     );
 }
