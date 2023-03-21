@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-    //padding-inline: 1rem;
+  //padding-inline: 1rem;
   width: 100%;
   height: 6.5rem;
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.colors.background};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,19 +42,19 @@ export const BaseHeaderButton = styled.button`
 `;
 
 export const LocalizationButton = styled(BaseHeaderButton)`
-  background: ${({ theme }) => theme["purple-light"]};
-  color: ${({ theme }) => theme["purple-dark"]};
+  background: ${({ theme }) => theme.colors["purple-light"]};
+  color: ${({ theme }) => theme.colors["purple-dark"]};
 
-  svg { 
-    color: ${({ theme }) => theme["purple"]};
+  svg {
+    color: ${({ theme }) => theme.colors["purple"]};
   }
 `;
 
 export const CartButton = styled(BaseHeaderButton)`
-  background: ${({ theme }) => theme["yellow-light"]};
-  color: ${({ theme }) => theme["yellow-dark"]};
+  background: ${({ theme }) => theme.colors["yellow-light"]};
+  color: ${({ theme }) => theme.colors["yellow-dark"]};
 
-  svg { 
-    color: ${({ theme }) => theme["yellow"]};
+  svg {
+    color: ${({ theme }) => theme.colors["yellow"]};
   }
-`
+`;
