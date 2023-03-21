@@ -42,6 +42,10 @@ font-family: 'Roboto', sans-serif; */
             font-weight: 400;
         }
     }
+
+    /* img {
+        width: 80%;
+    } */
 `;
 
 export const BenefitsContainer = styled.div`
