@@ -8,10 +8,6 @@ export function CoffeeGallery(){
             
             <CoffeeList>
                 <CoffeeCard />
-                <CoffeeCard />
-                <CoffeeCard />
-                <CoffeeCard />
-                <CoffeeCard />
             </CoffeeList>
             
         </CoffeeGalleryContainer>
