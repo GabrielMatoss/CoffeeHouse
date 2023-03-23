@@ -68,7 +68,29 @@ export const DescriptionCoffee = styled.p`
 `;
 
 export const CardFooter = styled.div`
-    width: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3px;
+    
+    span {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.875rem;
+    }
+
+    p {
+      font-family: "Baloo 2", sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      line-height: 0.75rem;
+      color: ${({ theme }) => theme.colors["base-text"]};
+    }
+  }
 `;

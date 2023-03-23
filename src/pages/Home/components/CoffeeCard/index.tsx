@@ -19,10 +19,15 @@ export function CoffeeCard() {
               <span>Com leite</span>
             </Tags>
 
-            <NameCoffee>{e.name}</NameCoffee>
-            <DescriptionCoffee>{e.description}</DescriptionCoffee>
+            <NameCoffee>Expresso Tradicional</NameCoffee>
+            <DescriptionCoffee>O tradicional café feito com grãos moídos</DescriptionCoffee>
 
-            <CardFooter></CardFooter>
+            <CardFooter>
+              <div>
+                <span>R$</span>
+                <p>9,90</p>
+              </div>
+            </CardFooter>
           </CoffeeCardContainer>
         );
       })}
