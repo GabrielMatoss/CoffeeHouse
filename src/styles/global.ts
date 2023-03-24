@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: ${({theme}) => theme.colors.background};
-        color: ${({theme}) => theme.colors["base-text"]};
+        background-color: ${({ theme }) => theme.colors.background};
+        color: ${({ theme }) => theme.colors["base-text"]};
         -webkit-font-smoothing: antialiased;
     }
 
@@ -22,4 +22,13 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 `;
