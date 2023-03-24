@@ -69,8 +69,9 @@ export const DescriptionCoffee = styled.p`
 
 export const CardFooter = styled.div`
   width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   > div {
     display: flex;
@@ -91,6 +92,28 @@ export const CardFooter = styled.div`
       font-size: 1.5rem;
       line-height: 0.75rem;
       color: ${({ theme }) => theme.colors["base-text"]};
+    }
+  }
+`;
+
+export const AddCartWrapper = styled.div`
+  width: 7.5rem;
+
+  > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${({ theme }) => theme.colors["purple-dark"]};
+    color: ${({ theme }) => theme.colors["base-card"]};
+    border-radius: 6px;
+    margin-left: 0.3rem;
+    transition: .4s;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.purple};
     }
   }
 `;
