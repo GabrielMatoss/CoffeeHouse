@@ -43,9 +43,14 @@ font-family: 'Roboto', sans-serif; */
         }
     }
 
-    /* img {
+    .containerImgHero{
+       // background-color: blueviolet;
         width: 80%;
-    } */
+        img {
+            max-width: 100%;
+            min-width: 300px;
+        }
+    }
 `;
 
 export const BenefitsContainer = styled.div`

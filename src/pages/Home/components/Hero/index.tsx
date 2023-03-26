@@ -41,7 +41,10 @@ export function Hero() {
           </BenefitsContainer>
         </div>
 
+      <div className="containerImgHero">
         <img src={heroCoffeeDelivery} />
+      </div>
+        
       </HeroContent>
     </HeroContainer>
   );
