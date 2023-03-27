@@ -8,6 +8,14 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  @media (max-width: 1150px) {
+    padding-inline: 1rem;
+  }
 
   > div {
     width: 100%;

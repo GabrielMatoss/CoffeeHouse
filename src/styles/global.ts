@@ -31,4 +31,13 @@ export const GlobalStyle = createGlobalStyle`
   input[type="number"] {
     -moz-appearance: textfield;
   }
+
+    @media(max-width: 660px){
+      html{
+        font-size: 87.25%;
+    }
+  }
 `;
+
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Roboto', sans-serif; */

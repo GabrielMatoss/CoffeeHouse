@@ -16,7 +16,7 @@ export function Hero() {
               qualquer hora
             </p>
           </section>
-
+          
           <BenefitsContainer>
             <InfoWithIcon
               iconBg={colors["yellow-dark"]}
