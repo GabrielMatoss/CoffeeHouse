@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CoffeeGalleryContainer = styled.section`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 8rem;
   padding-inline: 1rem;
   h3 {
     font-size: 2rem;

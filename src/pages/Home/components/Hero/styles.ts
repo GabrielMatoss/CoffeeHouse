@@ -4,7 +4,7 @@ import heroBackground from "../../../../assets/heroBackground.png";
 
 export const HeroContainer = styled.section`
   width: 100%;
-  height: max-content;
+  height: 34rem;
   background: ${({ theme }) => `url(${heroBackground}) no-repeat center,
       linear-gradient(
         0deg,
@@ -21,7 +21,9 @@ export const HeroContainer = styled.section`
     padding-inline: 1rem;
   }
   @media (max-width: 1060px) {
+    margin-top: 4rem;
     padding-inline: 1rem;
+    height: max-content;
   }
 `;
 
