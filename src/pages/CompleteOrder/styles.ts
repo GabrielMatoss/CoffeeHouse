@@ -6,3 +6,9 @@ export const CompleteOrderContainer = styled.form`
     justify-content: space-between;
     gap: 2rem;
 `;
+
+export const SectionBaseStyle= styled.div`
+    width: 100%;
+    background: ${({theme}) => theme.colors["base-card"]};
+    padding: 2.5rem;
+`;
