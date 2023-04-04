@@ -15,6 +15,7 @@ export const PaymentMethodInputContainer = styled.div`
     border: 1px solid ${({theme}) => theme.colors["base-button"]};
     transition: .4s;
    //line-height: 130%;
+   cursor: pointer ; 
     &:hover {
         background: ${({theme}) => theme.colors["base-hover"]};
     }
