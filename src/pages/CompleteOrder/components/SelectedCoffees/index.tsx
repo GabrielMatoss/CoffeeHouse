@@ -1,3 +1,4 @@
+import { CoffeeCartCard } from "../CoffeeCartCard";
 import { DetailsContainer, SelectedCoffeesContainer } from "./styles";
 
 export function SelectedCoffees(){
@@ -6,7 +7,8 @@ export function SelectedCoffees(){
             <h3>Cafés selecionados</h3>
 
             <DetailsContainer>
-                <p>Itens</p>
+              <CoffeeCartCard />
+              <CoffeeCartCard />
             </DetailsContainer>
         </SelectedCoffeesContainer>
     )
