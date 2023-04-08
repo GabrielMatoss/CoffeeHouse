@@ -50,6 +50,7 @@ export const IconWrapper = styled.button.attrs({
 
   &:disabled {
     opacity: 0.4;
+   // cursor: not-allowed;
   }
 
   &:not(:disabled):hover {
