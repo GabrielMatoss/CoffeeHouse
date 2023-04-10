@@ -47,6 +47,23 @@ export const BaseHeaderButton = styled.button`
 
   position: relative;
   font-size: 0.875rem;
+  cursor: inherit;
+
+  span {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    top: calc(-1.25rem / 2);
+    right: calc(-1.25rem / 2);
+    color: ${({theme}) => theme.colors.white};
+    background: ${({theme}) => theme.colors["yellow-dark"]};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
 `;
 
 export const LocalizationButton = styled(BaseHeaderButton)`
