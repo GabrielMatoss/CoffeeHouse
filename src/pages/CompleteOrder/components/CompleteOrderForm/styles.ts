@@ -35,11 +35,11 @@ export const AddressFormContainer = styled.div`
         max-width: 12.5rem;
     }
 
-    .rua {
+    .street {
         grid-column: span 3;
     }
 
-    .complemento {
+    .complement {
         grid-column: span 2;
     }
 `;
