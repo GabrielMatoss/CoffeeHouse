@@ -1,12 +1,37 @@
 import { CompleteOrderForm } from "./components/CompleteOrderForm";
 import { SelectedCoffees } from "./components/SelectedCoffees";
 import { CompleteOrderContainer } from "./styles";
+import * as zod from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, FormProvider } from "react-hook-form";
 
-export function CompleteOrder(){
-    return(
-       <CompleteOrderContainer className="container">
-            <CompleteOrderForm />
-            <SelectedCoffees />
-       </CompleteOrderContainer>
-    )
+const confirmOrderFormValidationSchema = zod.object({
+  cep: zod.string().min(1, "Informe o Cep"),
+});
+
+export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
+
+type ConfirmOrderFormData = OrderData;
+
+export function CompleteOrder() {
+  const confirmOrderForm = useForm<ConfirmOrderFormData>({
+    resolver: zodResolver(confirmOrderFormValidationSchema),
+  });
+
+  const { handleSubmit } = confirmOrderForm;
+
+  function handleConfirmOrder(data: ConfirmOrderFormData) {
+    console.log(data);
+  }
+  return (
+    <FormProvider {...confirmOrderForm}>
+      <CompleteOrderContainer
+        className="container"
+        onSubmit={handleSubmit(handleConfirmOrder)}
+      >
+        <CompleteOrderForm />
+        <SelectedCoffees />
+      </CompleteOrderContainer>
+    </FormProvider>
+  );
 }
