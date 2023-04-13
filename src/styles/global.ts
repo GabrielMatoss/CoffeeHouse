@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   input[type="number"] {
-    -moz-appearance: textfield;
+    appearance: textfield;
   }
 
     @media(max-width: 660px){
@@ -38,7 +38,15 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 87.25%;
     }
   }
-`;
 
-/* font-family: 'Baloo 2', cursive;
-font-family: 'Roboto', sans-serif; */
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors["base-button"]}
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: ${({ theme }) => theme.colors.purple}
+  }
+`;
