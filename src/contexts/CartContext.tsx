@@ -3,6 +3,7 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 import { ListCoffeeProps } from "../utils/CoffeeData";
 
 import { produce } from "immer";
+import { toast } from "react-toastify";
 
 export interface CartItem extends ListCoffeeProps {
   quantity: number;
@@ -52,6 +53,9 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     const newCart = produce(cartItems, (draft) => {
       if (coffeeAlreadyExistsInCart < 0) {
         draft.push(coffee);
+        toast.success("Item adicionado com Sucesso!", {
+          theme: "colored",
+        })
       } else {
         draft[coffeeAlreadyExistsInCart].quantity += coffee.quantity;
       }
@@ -71,8 +75,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
       if (coffeeExistsInCart >= 0) {
         const item = draft[coffeeExistsInCart];
-        draft[coffeeExistsInCart].quantity =
-          type === "increase" ? item.quantity + 1 : item.quantity - 1;
+        draft[coffeeExistsInCart].quantity = type === "increase" ? item.quantity + 1 : item.quantity - 1;
       }
     });
     setCartItems(newCart);
@@ -88,15 +91,18 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
       }
     });
     setCartItems(newCart);
+    toast.success("Item removido com Sucesso!", {
+      theme: "colored",
+    })
   }
 
-  function cleanCart(){
+  function cleanCart() {
     setCartItems([]);
   }
 
   useEffect(() => {
     localStorage.setItem(COFFEE_ITEMS_STORAGE_KEY, JSON.stringify(cartItems));
-  },[ cartItems]);
+  }, [cartItems]);
 
   return (
     <CartContext.Provider
