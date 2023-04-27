@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
+import { toast } from "react-toastify";
 
 enum PaymentMethods {
   credit = "credit",
@@ -40,13 +41,16 @@ export function CompleteOrder() {
   const { handleSubmit } = confirmOrderForm;
 
   const navigate = useNavigate();
-  const {cleanCart} = useCart();
+  const { cleanCart } = useCart();
 
   function handleConfirmOrder(data: ConfirmOrderFormData) {
     navigate("/orderConfirmed", {
       state: data,
     });
     cleanCart();
+    toast.success("Pedido concluído com Sucesso!", {
+      theme: "colored",
+    })
   }
   return (
     <FormProvider {...confirmOrderForm}>
