@@ -50,7 +50,7 @@ export function CompleteOrder() {
     cleanCart();
     toast.success("Pedido concluído com Sucesso!", {
       theme: "colored",
-    })
+    });
   }
   return (
     <FormProvider {...confirmOrderForm}>
